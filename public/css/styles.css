@@ -1,0 +1,317 @@
+
+/* =========================
+   RESET & BASE LAYOUT
+========================= */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #f8f8f8;
+    font-family: "Georgia", serif;
+    color: #111;
+    line-height: 1.8;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN PAGE WRAPPER (IMPORTANT) */
+.page-content {
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.9;
+}
+
+/* =========================
+   NAVBAR (FIXED FLEX LAYOUT)
+========================= */
+
+.navbar {
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #ececec;
+    border-radius: 0;
+    padding: 18px 0;
+    margin-bottom: 60px;
+    min-height: 70px;
+}
+
+/* custom flex container inside navbar */
+.navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* brand */
+.navbar-brand {
+    font-size: 28px !important;
+    font-weight: 700;
+    color: #111 !important;
+}
+
+/* right menu */
+.navbar-nav {
+    float: none !important;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.navbar-nav > li {
+    float: none;
+}
+
+.navbar-nav li a {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666 !important;
+    padding: 10px 5px;
+    transition: 0.3s;
+}
+
+.navbar-nav li a:hover {
+    color: #111 !important;
+}
+
+/* =========================
+   HERO (HOME PAGE)
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 90px 0;
+    margin-bottom: 60px;
+}
+
+.hero-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #888;
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 22px;
+    color: #666;
+}
+
+/* =========================
+   CONTENT CARDS
+========================= */
+
+.post-preview,
+.page-container,
+.compose-container,
+.article-container {
+    background: #fff;
+    padding: 50px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+}
+
+/* hover effect only for posts */
+.post-preview {
+    transition: all 0.3s ease;
+}
+
+.post-preview:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   POST META
+========================= */
+
+.post-meta {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   ARTICLE PAGE
+========================= */
+
+.article-container p {
+    font-size: 20px;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.form-control {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    padding: 12px;
+}
+
+.form-control:focus {
+    border-color: #999;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background: #111;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+}
+
+.btn-primary:hover {
+    background: #222;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    color: #111;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.read-more {
+    font-weight: 600;
+}
+
+/* =========================
+   FOOTER (STICKY)
+========================= */
+
+.footer {
+    margin-top: auto;
+    background: #fff;
+    border-top: 1px solid #ececec;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* tablets */
+@media (max-width: 768px) {
+
+    .page-content {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .post-preview,
+    .page-container,
+    .compose-container,
+    .article-container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+/* phones */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .navbar-brand {
+        font-size: 22px !important;
+    }
+
+    .post-preview {
+        padding: 20px;
+    }
+
+    .navbar-nav {
+        display: block;
+    }
+
+    .navbar-nav > li {
+        display: block;
+        text-align: left;
+    }
+}
+
+.page-content {
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px; /* IMPORTANT for mobile */
+}
